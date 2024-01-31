@@ -1,0 +1,178 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 2px solid #FFD700;
+    color: #302e2e;
+    padding: 20px 0;
+}
+
+/* Appliquer l'animation à la section */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    animation: moveContainers 0.5s ease-in-out, flame 3s infinite alternate;
+    position: relative;
+    overflow: hidden;
+    height: auto; /* Ajustez la hauteur au besoin */
+}
+
+
+/* Animation pour la séparation au début */
+@-webkit-keyframes separateContainers {
+    0% {
+        -webkit-transform: translateY(50px);
+                transform: translateY(50px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+@keyframes separateContainers {
+    0% {
+        -webkit-transform: translateY(50px);
+                transform: translateY(50px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+/* Animation de feu */
+@-webkit-keyframes flame {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+@keyframes flame {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+
+.container {
+    width: 200px; /* Ajustez la largeur au besoin */
+    height: auto;
+    margin: 20px;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    transform: translateY(50px);
+    transition: transform 0.5s ease;
+    position: relative;
+    z-index: 1;
+}
+
+
+.container:hover {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+    z-index: 2; /* Mettre le container survolé au-dessus des autres */
+}
+
+
+.container p {
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+.container p span {
+    display: block;
+    padding: 5px 0;
+    border-bottom: 2px solid #A10100;
+    font-size: 1.2em;
+    color: #FFD700;
+}
+
+.container p strong {
+    display: block;
+    font-size: 1.5em;
+    color: #FF4500;
+    margin-top: 10px;
+}
+
+.container p img {
+    width: 100%;
+    height: auto; /* Permet à la hauteur de s'ajuster dynamiquement en fonction de la largeur */
+    margin-top: 10px;
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Animation pour le rétablissement de la position initiale au chargement de la page */
+@-webkit-keyframes moveContainers {
+    0% {
+        -webkit-transform: translateY(50px);
+                transform: translateY(50px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+@keyframes moveContainers {
+    0% {
+        -webkit-transform: translateY(50px);
+                transform: translateY(50px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+/* Animation pour la séparation au début */
+@keyframes separateContainers {
+    0% {
+        -webkit-transform: translateY(50px);
+                transform: translateY(50px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+/* Appliquer l'animation à la section */
+section {
+    -webkit-animation: moveContainers 0.5s ease-in-out;
+            animation: moveContainers 0.5s ease-in-out;
+    background: -webkit-linear-gradient(90deg, rgba(255, 165, 0, 0.8), rgba(255, 0, 0, 0.8), rgba(255, 165, 0, 0.8));
+    background: linear-gradient(90deg, rgba(255, 165, 0, 0.8), rgba(255, 0, 0, 0.8), rgba(255, 165, 0, 0.8));
+        background: -o-linear-gradient(left, rgba(255, 165, 0, 0.8), rgba(255, 0, 0, 0.8), rgba(255, 165, 0, 0.8));
+    background: linear-gradient(90deg, rgba(255, 165, 0, 0.8), rgba(255, 0, 0, 0.8), rgba(255, 165, 0, 0.8));
+    background-size: 200% 100%; /* Taille du fond pour l'animation */
+    -webkit-animation: flame 3s infinite alternate;
+            animation: flame 3s infinite alternate; /* Appliquer l'animation de feu à la section */
+}
