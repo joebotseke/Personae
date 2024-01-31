@@ -1,4 +1,5 @@
 Gestion de Personnages
+
 Ce projet PHP constitue une application simple de gestion de personnages. Il offre des fonctionnalités de base telles que l'ajout, la mise à jour et la suppression de personnages, avec une interface utilisateur conviviale.
 
 Fonctionnalités
